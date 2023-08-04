@@ -377,7 +377,7 @@ a {
 }
 .products .products-show__mug {
   background-color: grey;
-  width: 25rem;
+  max-width: 25rem;
   height: 25rem;
 }
 .products .products-show__img {
