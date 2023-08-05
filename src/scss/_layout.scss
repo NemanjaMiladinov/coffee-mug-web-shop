@@ -71,9 +71,8 @@
   &__title {
     margin-top: $page-margin-top;
     text-align: center;
-    font-weight: $font-reg;
-    // text-transform: uppercase;
-    color: $dark-color;
+    font-weight: $font-light;
+    color: $section-title-color;
     position: relative;
 
     &::before,
@@ -111,13 +110,12 @@
   height: 40rem;
   width: 100%;
   margin-top: $page-margin-top;
-
+  // background-color: whitesmoke;
   &__title {
     margin-top: $page-margin-top;
     text-align: center;
-    font-weight: $font-reg;
-    // text-transform: uppercase;
-    color: $dark-color;
+    font-weight: $font-light;
+    color: $section-title-color;
     position: relative;
     &::before,
     &::after {
@@ -140,23 +138,77 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    & > :not(:last-child) {
-      margin-bottom: 1rem;
-    }
+    position: relative;
+    // & > :not(:last-child) {
+    //   margin-bottom: 1rem;
+    // }
+
     @include respond(phone) {
       display: flex;
       justify-content: center;
       flex-direction: column;
     }
     &__mug {
-      background-color: grey;
-      max-width: 25rem;
-      height: 25rem;
+      // background-color: grey;
+      // this is for image height and width
+      // its a parent for images
+      width: 20rem;
+      height: 30rem;
+      text-align: center;
+      position: relative;
+    }
+    &__promo {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 1rem;
+      background-color: white;
+      text-transform: uppercase;
+      font-weight: $font-bold;
+      padding: 0.3rem 0.4rem;
+      // background-color: #222;
+      color: rgba(87, 41, 41, 0.644);
+    }
+    &__button {
+      // control button with js
+      position: absolute;
+      border: none;
+      bottom: 110px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1rem;
+      background-color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+      width: 90%;
+      padding: 1rem 0.8rem;
+      font-size: 0.9rem;
+      // background-color: #222;
+      color: rgba(68, 68, 68, 0.884);
+
+      &:hover {
+        // background-color: antiquewhite;
+      }
     }
     &__img {
       width: 100%;
-      height: 100%;
+      height: 80%;
       object-fit: cover;
+    }
+    &__name {
+      display: block;
+      color: black;
+      font-size: 1.5rem;
+      // background-color: black;
+    }
+    &__price {
+      display: block;
+      color: black;
+      font-size: 2rem;
+      font-weight: $font-light;
+      color: brown;
+      // background-color: black;
+      font-family: "Dai Banna SIL", serif;
     }
   }
 }
