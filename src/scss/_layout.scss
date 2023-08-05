@@ -152,7 +152,7 @@
       // background-color: grey;
       // this is for image height and width
       // its a parent for images
-      width: 20rem;
+      max-width: 20rem;
       height: 30rem;
       text-align: center;
       position: relative;
@@ -185,10 +185,6 @@
       font-size: 0.9rem;
       // background-color: #222;
       color: rgba(68, 68, 68, 0.884);
-
-      &:hover {
-        // background-color: antiquewhite;
-      }
     }
     &__img {
       width: 100%;
