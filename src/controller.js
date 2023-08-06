@@ -1,5 +1,7 @@
 import productsView from "./views/productsView.js";
 import Slider from "./views/sliderView.js";
+import { getData, State } from "./model/model.js";
+import { product } from "./model/modelProduct.js";
 
 let nextSlide = 0;
 // slider control for next click
@@ -36,23 +38,29 @@ const sliderBefore = () => {
   }
 };
 
-import Product, { State } from "./model.js";
 const fireEvent = async () => {
   // set position for every element inside slider
   Slider.initialPosition();
-
   // control events and set arguments to be functions
   Slider.eventhandler(sliderNext, sliderBefore);
+};
+const getState = async () => {
+  console.log("-- STATE CONTROLLER --");
 
-  // get data from "sever" api call
-  await Product.fetchProducts();
+  // Need this to get information about state object
+  const data = await getData();
+  console.log(data);
+  productsView.createImg(
+    State.productImages,
+    State.productName,
+    State.productPrice
+  );
 
   // call products state
-  console.log(State);
-
-  // generate markup
-  // productsView.createProducts(State.images);
-  productsView.generateMarkup(State.images);
+  console.log(State.productImages);
+  console.log(State.productName);
+  console.log(State.productPrice);
 };
 
 fireEvent();
+getState();

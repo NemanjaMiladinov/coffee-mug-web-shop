@@ -1,9 +1,9 @@
 {
   "products": [
     {
-      "imagePath": "src/assets/img/coffe-mug-dog.jpg",
       "productName": "Premium Product 1",
-      "productPrice": 100
+      "productPrice": 100,
+      "imagePath": "src/assets/img/coffe-mug-dog.jpg"
     }
   ]
 }

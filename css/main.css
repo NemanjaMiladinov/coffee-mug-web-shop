@@ -8,11 +8,10 @@
 /*
 $breakpoint argument choices : 
 -phone
--tab-portrait
 -tab-land
 -big-desktop
 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dai+Banna+SIL:wght@300;500&family=Poppins:wght@100;300;400;500;600;700&display=swap");
 .heading-main {
   font-size: 2.7rem;
   font-weight: 700;
@@ -302,8 +301,8 @@ a {
 .featured__title {
   margin-top: 2rem;
   text-align: center;
-  font-weight: 400;
-  color: #333;
+  font-weight: 300;
+  color: rgba(37, 37, 37, 0.768627451);
   position: relative;
 }
 .featured__title::before, .featured__title::after {
@@ -341,8 +340,8 @@ a {
 .products__title {
   margin-top: 2rem;
   text-align: center;
-  font-weight: 400;
-  color: #333;
+  font-weight: 300;
+  color: rgba(37, 37, 37, 0.768627451);
   position: relative;
 }
 .products__title::before, .products__title::after {
@@ -363,10 +362,8 @@ a {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
-}
-.products .products-show > :not(:last-child) {
-  margin-bottom: 1rem;
+  justify-content: space-between;
+  position: relative;
 }
 @media (min-width: 0px) and (max-width: 600px) {
   .products .products-show {
@@ -375,14 +372,61 @@ a {
     flex-direction: column;
   }
 }
+@media (min-width: 600px) and (max-width: 1200px) {
+  .products .products-show {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
 .products .products-show__mug {
-  background-color: grey;
-  max-width: 25rem;
-  height: 25rem;
+  max-width: 20rem;
+  height: 30rem;
+  text-align: center;
+  position: relative;
+}
+.products .products-show__promo {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1rem;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.3rem 0.4rem;
+  color: rgba(87, 41, 41, 0.644);
+}
+.products .products-show__button {
+  position: absolute;
+  border: none;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 90%;
+  padding: 1rem 0.8rem;
+  font-size: 0.9rem;
+  color: rgba(68, 68, 68, 0.884);
 }
 .products .products-show__img {
   width: 100%;
-  height: 100%;
+  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.products .products-show__name {
+  display: block;
+  color: black;
+  font-size: 1.5rem;
+}
+.products .products-show__price {
+  display: block;
+  color: black;
+  font-size: 2rem;
+  font-weight: 300;
+  color: brown;
+  font-family: "Dai Banna SIL", serif;
 }
