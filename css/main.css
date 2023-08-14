@@ -222,6 +222,15 @@ a {
   background-color: rgb(155, 155, 155);
 }
 
+.input {
+  margin-top: 1rem;
+  height: 60px;
+  width: 220px;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+
 .hero {
   height: 60vh;
   position: relative;
@@ -310,7 +319,7 @@ a {
   content: "";
   position: absolute;
   top: 50%;
-  background-color: rgba(165, 42, 42, 0.37);
+  background-color: rgba(165, 42, 42, 0.368627451);
   width: 40px;
   height: 1px;
 }
@@ -594,7 +603,9 @@ a {
 }
 
 .stories {
-  height: 50rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   width: 100%;
 }
 .stories__title {
@@ -681,4 +692,20 @@ a {
   font-family: "Dai Banna SIL", serif;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+.email-update {
+  height: 25rem;
+  background-color: rgb(41, 24, 24);
+  background-color: #1d1f2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.email-update h2 {
+  color: white;
+}
+.email-update h1 {
+  color: white;
 }
