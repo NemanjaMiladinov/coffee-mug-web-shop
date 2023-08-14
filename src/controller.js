@@ -49,17 +49,13 @@ const getState = async () => {
 
   // Need this to get information about state object
   const data = await getData();
-  console.log(data);
-  productsView.createImg(
-    State.productImages,
-    State.productName,
-    State.productPrice
-  );
+  // console.log(data);
 
-  // call products state
-  console.log(State.productImages);
-  console.log(State.productName);
-  console.log(State.productPrice);
+  console.log(State);
+
+  // productsView.renderProducts(State.products);
+  productsView.createProducts(State.products);
+  // console.log(productsView.createProducts());
 };
 
 fireEvent();

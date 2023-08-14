@@ -2,28 +2,27 @@ class ProductsView {
   parentEl = document.querySelector(".products-show");
   productsShow = document.querySelector(".products-show__mug");
 
-  createImg(image, name, price) {
-    for (let i = 0; i < 10; i++) {
+  createProducts(product) {
+    product.map((item) => {
       const markup = `
       <div class="products-show__mug">
           <span class="products-show__promo">
               on sale.
           </span>
           <button class="products-show__button">
-          Explore Mug
+            Explore Mug
           </button>
           <img
-            src="${image}"
+            src="${item.imagePath}"
             alt=""
             class="products-show__img"
             />
-          <span class="products-show__name">${name}</span>
-          <span class="products-show__price">${price}</span>
+          <span class="products-show__name">${item.productName}</span>
+          <span class="products-show__price">${"$"}${item.productPrice}</span>
       </div>
       `;
-
-      this.parentEl.insertAdjacentHTML("afterbegin", markup);
-    }
+      this.parentEl.insertAdjacentHTML("beforeend", markup);
+    });
   }
 }
 

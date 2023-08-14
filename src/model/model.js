@@ -1,10 +1,7 @@
 import { URL } from "../config.js";
 
-export const State = {
-  productImages: [],
-  productName: [],
-  productPrice: [],
-  store: 10,
+export let State = {
+  products: [],
 };
 
 export const getData = async () => {
@@ -14,13 +11,15 @@ export const getData = async () => {
     const response = await fetch(request);
 
     const data = await response.json();
-    // console.log(data);
+
+    // set state for products
+    data.products.map((element) => {
+      // console.log(element);
+      State.products.push(element);
+    });
 
     // set state for product card (more products)
-    const [results] = data.products;
-    State.productImages.push(results.imagePath);
-    State.productName.push(results.productName);
-    State.productPrice.push(results.productPrice);
+    // console.log(State);
 
     return data;
   } catch (error) {

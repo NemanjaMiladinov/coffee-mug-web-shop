@@ -7,7 +7,54 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
+@mixin decoration() {
+  &__title {
+    padding-top: $page-margin-top;
+    text-align: center;
+    font-weight: $font-light;
+    color: $section-title-color;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 70%;
+      background-color: rgba(165, 42, 42, 0.37);
+      width: 40px;
+      height: 1px;
+    }
+    &::before {
+      transform: translateX(-50px);
+    }
+    &::after {
+      transform: translateX(10px);
+    }
+  }
+}
+@mixin decorationHeading() {
+  &__heading {
+    padding-top: $page-margin-top;
+    text-align: center;
+    font-weight: $font-light;
+    color: $section-title-color;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 70%;
+      background-color: rgba(165, 42, 42, 0.37);
+      width: 40px;
+      height: 1px;
+    }
+    &::before {
+      transform: translateX(-50px);
+    }
+    &::after {
+      transform: translateX(10px);
+    }
+  }
+}
 // Media query menager
 /*
 0 - 600px : phone
