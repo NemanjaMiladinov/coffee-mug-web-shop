@@ -89,6 +89,7 @@ body {
 
 a {
   text-decoration: none;
+  list-style: none;
 }
 
 .nav {
@@ -231,6 +232,21 @@ a {
   text-align: center;
 }
 
+.footer {
+  text-align: center;
+}
+.footer-nav {
+  text-align: center;
+}
+.footer-nav__title {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.footer-nav__list {
+  text-decoration: none;
+  list-style: none;
+}
 .hero {
   height: 60vh;
   position: relative;
