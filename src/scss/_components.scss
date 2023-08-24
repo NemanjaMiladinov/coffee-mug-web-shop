@@ -148,21 +148,24 @@
 }
 .footer {
   text-align: center;
-  &__desc {
-    // margin-bottom: 2rem;
-  }
 }
 .footer-nav {
-  text-align: center;
   &__title {
     display: block;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    color: grey;
+    font-weight: $font-med;
   }
   &__list {
     text-decoration: none;
     list-style: none;
   }
-  &__items {
+  &__links {
+    color: grey;
   }
+}
+.developer {
+  display: block;
+  margin-top: 2rem;
 }
