@@ -210,17 +210,53 @@ a {
           backface-visibility: hidden;
   cursor: pointer;
 }
-.slider-products__img {
+.slider-products__image {
   width: 100%;
-  height: 100%;
+  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: -100;
 }
-.slider-products__1 {
-  background-color: gray;
+.slider-products__promo {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1rem;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.3rem 0.4rem;
+  color: rgba(87, 41, 41, 0.644);
 }
-.slider-products__2 {
-  background-color: rgb(155, 155, 155);
+.slider-products__button {
+  position: absolute;
+  border: none;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 90%;
+  padding: 1rem 0.8rem;
+  font-size: 0.9rem;
+  color: rgba(68, 68, 68, 0.884);
+}
+.slider-products__name {
+  display: block;
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.slider-products__price {
+  display: block;
+  color: black;
+  font-size: 2rem;
+  font-weight: 300;
+  color: brown;
+  font-family: "Dai Banna SIL", serif;
+  text-align: center;
 }
 
 .input {
@@ -357,7 +393,7 @@ a {
 .featured__slider {
   margin-top: 1rem;
   width: 100%;
-  height: 400px;
+  height: 30rem;
   position: relative;
 }
 .featured__slider--before {
