@@ -1,16 +1,19 @@
-import productsView from "./views/productsView.js";
-import Slider from "./views/sliderView.js";
 import { getData, State } from "./model/model.js";
-import { product } from "./model/modelProduct.js";
+import featuredView from "./views/featuredView.js";
+import productsView from "./views/productsView.js";
+import sliderView from "./views/sliderView.js";
+import Slider from "./views/sliderView.js";
 
 let nextSlide = 0;
 // slider control for next click
 const sliderNext = () => {
   console.log("next");
+  const products = document.querySelectorAll(".slider-products");
+
   nextSlide++;
 
   // get element from view module
-  const products = Slider.getQuery();
+  // const products = Slider.getQuery();
 
   // slider animation
   for (let i = 0; i < products.length; i++) {
@@ -22,14 +25,16 @@ const sliderNext = () => {
       return;
     }
   }
+  console.log(nextSlide);
+  console.log(products.length);
 };
 // slider control for previus click
 const sliderBefore = () => {
   console.log("before");
 
-  nextSlide--;
+  const products = document.querySelectorAll(".slider-products");
 
-  const products = Slider.getQuery();
+  nextSlide--;
 
   nextSlide = Math.max(nextSlide, 0);
 
@@ -38,12 +43,6 @@ const sliderBefore = () => {
   }
 };
 
-const fireEvent = async () => {
-  // set position for every element inside slider
-  Slider.initialPosition();
-  // control events and set arguments to be functions
-  Slider.eventhandler(sliderNext, sliderBefore);
-};
 const getState = async () => {
   console.log("-- STATE CONTROLLER --");
 
@@ -56,7 +55,13 @@ const getState = async () => {
   // productsView.renderProducts(State.products);
   productsView.createProducts(State.products);
   // console.log(productsView.createProducts());
+
+  featuredView.getState(State.products);
+  featuredView.createProducts(State.products);
 };
 
-fireEvent();
+const fireEvent = async () => {
+  Slider.eventhandler(sliderNext, sliderBefore);
+};
 getState();
+fireEvent();
