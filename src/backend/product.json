@@ -49,6 +49,56 @@
       "productName": "Premium Product 10",
       "productPrice": 100,
       "imagePath": "src/assets/img/coffe-mug-dog.jpg"
+    },
+    {
+      "productName": "Premium Product 11",
+      "productPrice": 100,
+      "imagePath": "src/assets/img/coffe-mug-dog.jpg"
+    },
+    {
+      "productName": "Premium Product 12",
+      "productPrice": 100,
+      "imagePath": "src/assets/img/coffe-mug-dog.jpg"
+    },
+    {
+      "productName": "Premium Product 13",
+      "productPrice": 100,
+      "imagePath": "src/assets/img/coffe-mug-dog.jpg"
+    },
+    {
+      "productName": "Premium Product 14",
+      "productPrice": 100,
+      "imagePath": "src/assets/img/coffe-mug-dog.jpg"
+    },
+    {
+      "productName": "Premium Product 15",
+      "productPrice": 100,
+      "imagePath": "src/assets/img/coffe-mug-dog.jpg"
+    },
+    {
+      "productName": "Premium Product 16",
+      "productPrice": 100,
+      "imagePath": "src/assets/img/coffe-mug-dog.jpg"
+    },
+    {
+      "productName": "Premium Product 17",
+      "productPrice": 100,
+      "imagePath": "src/assets/img/coffe-mug-dog.jpg"
+    },
+    {
+      "productName": "Premium Product 18",
+      "productPrice": 100,
+      "imagePath": "src/assets/img/coffe-mug-dog.jpg"
+    },
+    {
+      "productName": "Premium Product 19",
+      "productPrice": 100,
+      "imagePath": "src/assets/img/coffe-mug-dog.jpg"
+    },
+    {
+      "productName": "Premium Product 20",
+      "productPrice": 100,
+      "imagePath": "src/assets/img/coffe-mug-dog.jpg"
     }
   ]
 }
